@@ -1,21 +1,20 @@
-# REKA:BIT Extension for Microsoft MakeCode (modified to remove NeoPixel/ RGB) to make Bluetooth work
 
-This code provides the driver for [**REKA:BIT** - Simplifying robotics with micro:bit](https://www.cytron.io/p-rekabit-simplifying-robotics-with-microbit).
+# REKA:BIT -- Trung Tâm Hải Vinh
 
-**REKA:BIT** aims at simplifying robots & projects making with micro:bit. With the built-in dual-channel DC motor driver, 4x servo control and dedicated power input, students can build projects with mechanical movements right away. The 6x Grove ports with LED status indicators on all its IO pins enable additional sensors and modules to be applied to any projects conveniently. REKA:BIT works with **micro:bit V1 & V2**.
+Phiên bản REKA:BIT này đã được Trung Tâm Hải Vinh chỉnh sửa để phù hợp với việc tích hợp nhiều hệ thống khác nhau. Đây là một công cụ hỗ trợ mạnh mẽ cho việc phát triển các dự án robot và STEM với micro:bit.
 
-'**REKA**' comes from the [*Malay*](https://en.wikipedia.org/wiki/Malay_language) word 'reka bentuk' which means design. 
+**REKA:BIT** hướng tới việc đơn giản hóa việc tạo ra các dự án robot và các ứng dụng khác với micro:bit. Với bộ điều khiển động cơ DC hai kênh tích hợp sẵn, điều khiển 4 servo và nguồn điện chuyên dụng, học sinh có thể bắt tay vào xây dựng các dự án với các chuyển động cơ học ngay lập tức. REKA:BIT còn đi kèm với 6 cổng Grove có đèn LED báo trạng thái trên tất cả các chân IO, giúp việc tích hợp thêm các cảm biến và module khác trở nên thuận tiện hơn. Sản phẩm này hoạt động tương thích với **micro:bit V1 & V2**.
 
-Read more about REKA:BIT here: https://www.cytron.io/p-rekabit
+Tên gọi '**REKA**' bắt nguồn từ từ 'reka bentuk' trong tiếng Mã Lai, có nghĩa là thiết kế.
 
 ![REKA:BIT](https://raw.githubusercontent.com/CytronTechnologies/pxt-rekabit/master/icon.png)
 
-This is how you can add REKA:BIT extension to your MakeCode project.
-![Adding Extension](https://raw.githubusercontent.com/CytronTechnologies/pxt-rekabit/master/rekabit-adding-extension.gif)
+Dưới đây là cách bạn có thể thêm phần mở rộng REKA:BIT vào dự án MakeCode của mình.
+![Thêm phần mở rộng](https://raw.githubusercontent.com/CytronTechnologies/pxt-rekabit/master/rekabit-adding-extension.gif)
 
-## DC Motors
+## Động cơ DC
 
-Run Motor 1 forward at 50% speed when button A is pressed, brake the motor when button B is pressed.
+Chạy động cơ 1 tiến tới với tốc độ 50% khi nhấn nút A, dừng động cơ khi nhấn nút B.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -26,11 +25,11 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 
-## Servos
+## Servo
 
-Button A pressed - Rotate Servo 1 to 0 degree.
-Button B pressed - Rotate Servo 1 to 180 degree.
-Button A+B pressed - Disable Servo 1. No pulse is sent to Servo 1 and it can be rotated by hand.
+- Nhấn nút A - Xoay Servo 1 đến góc 0 độ.
+- Nhấn nút B - Xoay Servo 1 đến góc 180 độ.
+- Nhấn đồng thời nút A+B - Vô hiệu hóa Servo 1, không có xung nào được gửi đến Servo 1 và có thể xoay Servo bằng tay.
 
 ```blocks
 input.onButtonPressed(Button.A, function () {
@@ -44,20 +43,12 @@ input.onButtonPressed(Button.AB, function () {
 })
 ```
 
+**REKA:BIT** cũng đi kèm với bốn nút kiểm tra nhanh động cơ DC. Bạn có thể nhấn các nút M1A, M1B, M2A hoặc M2B trên bo mạch để chạy động cơ DC mà không cần viết mã. Điều này rất tiện lợi cho việc kiểm tra kết nối và chức năng của động cơ DC.
 
+## Giấy phép  
+MIT
 
-REKA:BIT also comes with four DC motor quick test buttons. You may press the onboard M1A, M1B, M2A or M2B push buttons to run your DC motors without writing any code. This is very convenient for checking the DC motor connections and functionality.
-  
-  
-## License  
-MIT  
-  
-## Supported targets  
-* for PXT/microbit  
-  
-  
-  
-> Open this page at [https://cytrontechnologies.github.io/pxt-rekabit/](https://cytrontechnologies.github.io/pxt-rekabit/)  
-  
-  
-<script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>  
+## Các mục tiêu hỗ trợ  
+* cho PXT/microbit  
+
+Bạn có thể mở trang này tại [https://cytrontechnologies.github.io/pxt-rekabit/](https://cytrontechnologies.github.io/pxt-rekabit/)
